@@ -1,0 +1,29 @@
+core:
+  no-permission: "§cDafür hast du keine Berechtigungen"
+  command:
+    no-description: "§7Keine Beschreibung"
+    command-not-supported: "§7Der CommandType {type} wird nicht unterstützt"
+    option:
+      no-condition: "§7Keine Weiteren Bedingungen"
+      non-negative: "§7Der Integer darf nicht negativ sein"
+      regex-fail: "§6{argument} §7entspricht nicht dem Regex {regex}"
+      whitelist-fail: "§6{argument} §7ist nicht auf der Whitelist {whitelist}"
+    supplier:
+      multi-arguments-not-allowed: "§cEs sind keine mehreren Werte für das Argument {} erlaubt"
+      interpreter-returns-null: "§cDer Interpreter §e{} §cgibt §4null §czurück"
+    interpreter:
+      description:
+        string: "Eine Zeichenkette"
+      exception:
+        float: "§e{argument} §cmuss im Bereich von §e{min} bis §e{max} §cliegen und §adarf §cein Fließkommazahl sein"
+        double: "§e{argument} §cmuss im Bereich von §e{min} bis §e{max} §cliegen und §adarf §cein Fließkommazahl sein"
+        boolean: "§e{argument} i§cst kein Wahrheitswert"
+        byte: "§e{argument} §cmuss im Bereich von §e{min} §cbis §e{max} §cliegen und §4darf §ckeine Fließkommazahl sein"
+        enum: "§e{argument} §cist kein gültiger Input"
+        integer: "§e{argument} §cmuss im Bereich von §e{min} §cbis §e{max} §cliegen und §4darf §ckeine Fließkommazahl sein"
+        long: "§e{argument} §cmuss im Bereich von §e{min} §cbis §e{max} §cliegen und §4darf §ckeine Fließkommazahl sein"
+        short: "§e{argument} §cmuss im Bereich von §e{min} §cbis §e{max} §cliegen und §4darf §ckeine Fließkommazahl sein"
+        material: "§e{argument} §cist kein Item"
+        player: "§e{argument} §cist kein Spieler"
+        enchantment: "§e{argument} §cist keine Verzauberung"
+        world: "§e{argument} §cist kein Name oder UUID einer Welt"

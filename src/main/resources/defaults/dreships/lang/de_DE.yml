@@ -1,0 +1,35 @@
+#
+# </n> will be replaced with an paragraph
+# this is a </n> test message. -> this is a
+#                                 test message.
+lang:
+  descriptions:
+    ds: "Befehl zum erstellen/verwalten von Schild-Verbindungen"
+  warns:
+    possible-suffocation: "§cReise nicht möglich, Ziel ist zugebaut."
+    vault-is-missing: "[DREShips] Couldn't find Vault on this server."
+  commands:
+    cache-is-empty: "§7Du hast zu wenig Schilder in deinem Cache gespeichert."
+    ds-create-help: "§7Bitte benutze §6/ds create <§7Preis§6> §7oder §6/ds create <§7Kondition§6>§7."
+    ds-create-start: "§7Schildverbindung wird erstellt."
+    ds-create-success: "§aSchild wurde bei §7{} §aerstellt. Asynchron: §7{}"
+    ds-delete-start: "§7Schildverbindung wird gelöscht."
+    ds-delete-success: "§7Schild wurde bei §7{} §agelöscht. Asynchron: §7{}"
+    ds-help: "§7Siehe die bei §6/ds help§7 angegebenen Befehle."
+    ds-info-is-travel-sign: "§8-----[§1Schildverbindung§8]----- §7</n> §bName: §7{} </n> §bZiel: §7{} </n> §bZielposition: §7{} </n> §bPreis: §7{}"
+    ds-info-no-travel-sign: "§7Dieser Block beinhaltet keine Schildverbindung."
+    ds-save-already-travel-sign: "§7Es existiert bereits eine Schildverbindung in diesem Block."
+    ds-save-success: "§b{} §7Schilder im Cache gespeichert."
+    ds-teleport-suggestion: "§7§oKlicke hier um zum Schild zu gelangen."
+    price-null-or-negative: "§7Der Preis muss ein §bZahlenwert §7und über §b0 §7sein."
+    target-block-is-no-sign: "§7Du musst ein Schild ansehen, um diesen Befehl ausführen zu dürfen."
+    target-block-is-no-travel-sign: "§7Du musst eine Schildverbindung ansehen, um diesen Befehl ausführen zu dürfen."
+  info:
+    break-denied: "§cDieses Schild darf nicht abgebaut werden"
+    tp-success: "§7Du bist erfolgreich von §b{} §7nach §b{} §7für §b{} §7Heronen gereist."
+  sign:
+    not-enough-money: "§7Du benötigst mehr Geld."
+    sign-line-one: "§8[§1§lVerbindung§8]"
+    sign-line-two: "§bvon§8: §7{}"
+    sign-line-three: "§bnach§8: §7{}"
+    sign-line-four: "§9für§8: §7{} H"

@@ -1,0 +1,6 @@
+name: DREShips
+version: @version@
+main: de.fyreum.dreships.DREShips
+api-version: 1.16
+authors: [Fyreum]
+softdepend: [Vault]

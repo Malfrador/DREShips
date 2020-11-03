@@ -1,0 +1,60 @@
+import org.apache.tools.ant.filters.ReplaceTokens
+
+plugins {
+    id 'com.github.johnrengelman.shadow' version '5.2.0'
+    id 'java'
+    id "de.undercouch.download" version "4.0.4"
+}
+
+group = 'de.fyreum'
+version = '1.0.0'
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+compileJava.options.encoding = 'UTF-8'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    maven {
+        name = 'papermc-repo'
+        url = 'https://papermc.io/repo/repository/maven-public/'
+    }
+    maven {
+        name = 'sonatype'
+        url = 'https://oss.sonatype.org/content/groups/public/'
+    }
+    maven {
+        url = 'https://jitpack.io'
+    }
+}
+
+dependencies {
+    annotationProcessor 'org.projectlombok:lombok:1.18.8'
+    compileOnly 'org.projectlombok:lombok:1.18.8'
+    compileOnly 'com.destroystokyo.paper:paper-api:1.16.3-R0.1-SNAPSHOT'
+    compile 'de.fyreum:litelibrary:1.0.0'
+    compile 'de.gleyder.umbrella.library:core:1.0.0mc1.15.2'
+    compileOnly 'com.github.MilkBowl:VaultAPI:1.7'
+}
+
+shadowJar {
+    destinationDirectory = file("build/libs/shadow")
+}
+
+task deploy(type: Copy, group: "server", description: "Copies sources to the dest directory") {
+    dependsOn shadowJar
+    from "build/libs/shadow"
+    into "F:/Developement/server 1.16.3/plugins"
+}
+
+task dowloaderServerJar(type: Download, group: "server") {
+    src 'https://papermc.io/api/v1/paper/1.16.3/latest/download'
+    dest new File("F:/Developement/server 1.16.3", "paper-1.16.3.jar")
+}
+
+processResources {
+    from(sourceSets.main.resources.srcDirs) {
+        filter ReplaceTokens, tokens: [version: version]
+    }
+}

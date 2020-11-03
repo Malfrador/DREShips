@@ -1,0 +1,30 @@
+settings:
+# +-----------------------------+
+# |           price             |
+# +-----------------------------+
+
+# price = distance * distanceMultiplier + startPrice
+
+  start-price: 10
+  land-price-distance-multiplier: 0.1
+  ship-price-distance-multiplier: 0.1
+  airship-price-distance-multiplier: 0.1
+
+# Editable list of all permissions used by this plugin.
+  permissions:
+
+# +-----------------------------*
+# |          general            |
+# +-----------------------------+
+
+    travel: "ds.travel.use"
+
+# +-----------------------------*
+# |          commands           |
+# +-----------------------------+
+
+    ds-create: "ds.create"
+    ds-delete: "ds.delete"
+    ds-info: "ds.info"
+    ds-save: "ds.save"
+    ds-teleport: "ds.teleport"
